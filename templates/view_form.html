@@ -1,0 +1,103 @@
+<!-- view_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Student Information</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4 mb-4">Student Information</h1>
+        <form method="POST">
+            <div class="form-group">
+                <label for="aadhar">Aadhar Number</label>
+                <input type="text" id="aadhar" class="form-control" value="{{ student.aadhar }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" class="form-control" value="{{ student.name }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="caste">Caste</label>
+                <input type="text" id="caste" class="form-control" value="{{ student.caste }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <input type="text" id="gender" class="form-control" value="{{ student.gender }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="status">Status</label>
+                <input type="text" id="status" class="form-control" value="{{ student.status }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="annual_income">Annual Income</label>
+                <input type="text" id="annual_income" class="form-control" value="{{ student.annual_income }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="parent_profession">Parent's Profession</label>
+                <input type="text" id="parent_profession" class="form-control" value="{{ student.parent_profession }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="ssc">SSC</label>
+                <input type="text" id="ssc" class="form-control" value="{{ student.ssc }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="hsc">HSC</label>
+                <input type="text" id="hsc" class="form-control" value="{{ student.hsc }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="contact_no">Contact Number</label>
+                <input type="text" id="contact_no" class="form-control" value="{{ student.contact_no }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="text" id="age" class="form-control" value="{{ student.age }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="domicile">Domicile</label>
+                <input type="text" id="domicile" class="form-control" value="{{ student.domicile }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" class="form-control" value="{{ student.company }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="emp_post">Employee Post</label>
+                <input type="text" id="emp_post" class="form-control" value="{{ student.emp_post }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="employee_id">Employee ID</label>
+                <input type="text" id="employee_id" class="form-control" value="{{ student.employee_id }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="application_date">Application Date</label>
+                <input type="text" id="application_date" class="form-control" value="{{ student.application_date.strftime('%Y-%m-%d') }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="update_date">Update Date</label>
+                <input type="text" id="update_date" class="form-control" value="{{ student.update_date.strftime('%Y-%m-%d') if student.update_date else '' }}" readonly>
+            </div>
+            <div class="form-group">
+                <a class="btn btn-success" href="/approve/{{ student.aadhar }}">Approve</a>
+                <a class="btn btn-danger" href="/disapprove/{{ student.aadhar }}">Disapprove</button>
+            </div>
+        </form>
+
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

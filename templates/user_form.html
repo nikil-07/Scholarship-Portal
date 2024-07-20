@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Application Form</h1>
+        <form action="/submit" method="POST">
+
+            <div class="form-group">
+                <label for="aadhar">Aadhar:</label>
+                <input type="text" class="form-control" id="aadhar" name="aadhar" maxlength="80" value= "{{aadhar}}" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" maxlength="80" required>
+            </div>
+
+            <div class="form-group">
+                <label for="caste">Caste:</label>
+                <select class="form-control" id="caste" name="caste" required>
+                    <option value="" disabled selected>Select Caste</option>
+                    <option value="Open">Open</option>
+                    <option value="OBC">OBC</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select class="form-control" id="gender" name="gender" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="annual_income">Annual Income:</label>
+                <select class="form-control" id="annual_income" name="annual_income" required>
+                    <option value="" disabled selected>Select Annual Income</option>
+                    <option value="Rs 1,00,000 - 3,00,000">Rs 1,00,000 - 3,00,000</option>
+                    <option value="Rs 3,00,000 - 4,50,000">Rs 3,00,000 - 4,50,000</option>
+                    <option value="Rs 4,50,000 - 8,00,000">Rs 4,50,000 - 8,00,000</option>
+                    <option value="Rs 8,00,000 Above">Rs 8,00,000 Above</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="parent_profession">Parent's Profession:</label>
+                <select class="form-control" id="parent_profession" name="parent_profession" required>
+                    <option value="" disabled selected>Select Parent Profession</option>
+                    <option value="Government">Government</option>
+                    <option value="Private">Private</option>
+                    <option value="Self Employed">Self Employed</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ssc">SSC:</label>
+                <input type="text" class="form-control" id="ssc" name="ssc" maxlength="5" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hsc">HSC:</label>
+                <input type="text" class="form-control" id="hsc" name="hsc" maxlength="5" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contact_no">Contact Number:</label>
+                <input type="text" class="form-control" id="contact_no" name="contact_no" maxlength="10" required pattern="\d{10}">
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="text" class="form-control" id="age" name="age" maxlength="2" required pattern="\d{1,2}">
+            </div>
+
+            <div class="form-group">
+                <label for="domicile">Domicile:</label>
+                <select class="form-control" id="domicile" name="domicile" required>
+                    <option value="" disabled selected>Select Domicile</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="West Bengal">West Bengal</option>
+                    <option value="Gujarat">Gujarat</option>
+                </select>                
+            </div>
+
+            <div class="form-group">
+                <label for="company">Company:</label>
+                <select class="form-control" id="company" name="company" required>
+                    <option value="" disabled selected>Select Company</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                </select>
+                
+            </div>
+
+            <div class="form-group">
+                <label for="post">Post:</label>
+                <input type="text" class="form-control" id="emp_post" name="emp_post" maxlength="300" required>
+            </div>
+
+            <div class="form-group">
+                <label for="employee_id">Employee ID:</label>
+                <input type="text" class="form-control" id="employee_id" name="employee_id" maxlength="3" required>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
